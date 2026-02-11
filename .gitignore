@@ -10,3 +10,11 @@ wheels/
 .venv
 
 merged_llama_vision/
+
+*.safetensors
+*.pickle
+*.pt
+*.bin
+*.ckpt
+*.log
+*.pth
