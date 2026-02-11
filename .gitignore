@@ -18,3 +18,14 @@ merged_llama_vision/
 *.ckpt
 *.log
 *.pth
+
+*.jpg
+*.jpeg
+*.png
+
+*.tar
+*.zip
+*.h5
+*.gz
+
+Images/

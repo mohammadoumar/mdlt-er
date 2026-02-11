@@ -24,7 +24,7 @@ base_model = MllamaForConditionalGeneration.from_pretrained(
     device_map="auto"
 )
 
-model = PeftModel.from_pretrained(base_model, LORA_DIR)
+model = PeftModel.from_pretrained(base_model, LORA_DIR, device_map=None)
 
 # Merge the LoRA weights into the base model
 merged_model = model.merge_and_unload() # type: ignore
