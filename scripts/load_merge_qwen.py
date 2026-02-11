@@ -28,7 +28,7 @@ base_model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
 
 #base_model.to(device) # type: ignore
 
-model = PeftModel.from_pretrained(base_model, LORA_DIR, device_map=None)#.to("cuda")
+model = PeftModel.from_pretrained(base_model, LORA_DIR, device_map={"": 0})#.to("cuda")
 
 # Merge the LoRA weights into the base model
 merged_model = model.merge_and_unload() # type: ignore
