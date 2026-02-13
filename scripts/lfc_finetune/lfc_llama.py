@@ -115,7 +115,8 @@ args = dict(
   max_grad_norm=1.0,                     # clip gradient norm to 1.0
   
   fp16=True,                             # use float16 mixed precision training
-  quantization_bit=4,                    # use 4-bit QLoRA  
+  quantization_bit=4,  
+  freeze_multi_modal_projector=True,     # use 4-bit QLoRA  
   #use_liger_kernel=True,
   #quantization_device_map="auto",
   
