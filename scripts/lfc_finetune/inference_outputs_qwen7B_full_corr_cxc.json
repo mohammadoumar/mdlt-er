@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "prediction": "{\n  \"dominant_emotion\": \"Calm\"\n}"
+  },
+  {
+    "id": 1,
+    "prediction": "{\n  \"dominant_emotion\": \"Aroused\"\n}"
+  },
+  {
+    "id": 2,
+    "prediction": "{\"dominant_emotion\": \"Contentment\"}"
+  }
+]
