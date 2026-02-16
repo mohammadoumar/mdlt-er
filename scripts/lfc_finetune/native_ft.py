@@ -5,22 +5,32 @@ import torch
 
 from PIL import Image
 
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor # FastLanguageModel for LLMs
+from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor, BitsAndBytesConfig, MllamaForConditionalGeneration # FastLanguageModel for LLMs
 from trl import SFTTrainer, SFTConfig # type: ignore
 #from unsloth.trainer import UnslothVisionDataCollator
 from trl.trainer.sft_trainer import DataCollatorForVisionLanguageModeling
 
+quant_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_compute_dtype="float16",
+    bnb_4bit_use_double_quant=True,
+    bnb_4bit_quant_type="nf4"
+)
+
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     #"unsloth/Llama-3.2-11B-Vision-Instruct",
     #"unsloth/Qwen2-VL-2B-Instruct-bnb-4bit",
-    "Qwen/Qwen2.5-VL-32B-Instruct",
-    load_in_4bit = True, # Use 4bit to reduce memory use. False for 16bit LoRA.
+    #"/Utilisateurs/umushtaq/emorec_work/mdlt_er/lfc_merged_models/llama_3.2_11B_vision_merged",
+    "Qwen/Qwen2.5-VL-7B-Instruct",
+    #torch_dtype=torch.bfloat16, # Use bfloat16 if possible for faster training. Switch to float16 if not supported on your GPU.
+    #config=quant_config, # Use 4bit to reduce memory use. False for 16bit LoRA. # type: ignore
     #use_gradient_checkpointing = "unsloth", # True or "unsloth" for long context
     #rope_scaling={"type": "linear", "factor": 512/2048}
     device_map="auto",
 )
 
-processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-32B-Instruct")
+processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
+#processor = AutoProcessor.from_pretrained("unsloth/Llama-3.2-11B-Vision-Instruct")
 collator = DataCollatorForVisionLanguageModeling(processor)
 
 # model = FastVisionModel.get_peft_model(
@@ -93,7 +103,7 @@ trainer = SFTTrainer(
         gradient_accumulation_steps = 4,
         warmup_steps = 5,
         #max_steps = 30,
-        num_train_epochs = 1, # Set this instead of max_steps for full training runs
+        num_train_epochs = 0.1, # Set this instead of max_steps for full training runs
         learning_rate = 2e-4,
         logging_steps = 25,
         optim = "adamw_8bit",
@@ -134,9 +144,11 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-sys.exit(0) # Remove this to run inference!
+#sys.exit(0) # Remove this to run inference!
 
-FastVisionModel.for_inference(model) # Enable for inference!
+#FastVisionModel.for_inference(model) # Enable for inference!
+
+model.eval()
 
 outputs = []
 
