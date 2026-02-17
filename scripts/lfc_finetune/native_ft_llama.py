@@ -6,12 +6,10 @@ import random
 
 from PIL import Image
 
-from datasets import Dataset
 
-from peft import LoraConfig, get_peft_model
 from trl import SFTTrainer, SFTConfig # type: ignore
 from trl.trainer.sft_trainer import DataCollatorForVisionLanguageModeling
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor, BitsAndBytesConfig, MllamaForConditionalGeneration, Trainer, TrainingArguments # FastLanguageModel for LLMs
+from transformers import AutoProcessor, BitsAndBytesConfig, MllamaForConditionalGeneration # FastLanguageModel for LLMs
 
 quant_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -20,48 +18,36 @@ quant_config = BitsAndBytesConfig(
     bnb_4bit_quant_type="nf4"
 )
 
-model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+model = MllamaForConditionalGeneration.from_pretrained(
 
-    "Qwen/Qwen2.5-VL-7B-Instruct",
+    "unsloth/Llama-3.2-11B-Vision-Instruct",
     torch_dtype=torch.bfloat16, # Use bfloat16 if possible for faster training. Switch to float16 if not supported on your GPU.
     device_map="auto",
 )
 
-
-lora_config = LoraConfig(
-            r=16,
-            lora_alpha=32,
-            lora_dropout=0.06,
-            target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
-        )
-
-model = get_peft_model(model, lora_config)
-
-processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
-#processor = AutoProcessor.from_pretrained("unsloth/Llama-3.2-11B-Vision-Instruct")
+processor = AutoProcessor.from_pretrained("unsloth/Llama-3.2-11B-Vision-Instruct")
 collator = DataCollatorForVisionLanguageModeling(processor)
 
-with open("/Utilisateurs/umushtaq/emorec_work/mdlt_er/datasets/json_datasets/llama3_vision_ds_test_lfc.jsonl", "r", encoding="utf-8") as f:
+with open("/Utilisateurs/umushtaq/emorec_work/mdlt_er/datasets/json_datasets/llama3_vision_ds_train_lfc.jsonl", "r", encoding="utf-8") as f:
     train_data = [json.loads(line) for line in f if line.strip()]
 
 with open("/Utilisateurs/umushtaq/emorec_work/mdlt_er/datasets/json_datasets/llama3_vision_ds_test_lfc.jsonl", "r", encoding="utf-8") as f:
     test_data = [json.loads(line) for line in f if line.strip()]
 
-train_dataset = Dataset.from_list(train_data)
-#train_data = random.sample(train_data, 150) # Shuffle training data
-#test_data = random.sample(test_data, len(test_data)) # Shuffle test data
+train_data = random.sample(train_data, 10)
+test_data = random.sample(test_data, 3)
 
 
-trainer = Trainer(
+trainer = SFTTrainer(
     model = model,
     data_collator = collator, # Must use!
-    train_dataset = train_dataset, # type: ignore
-    args = TrainingArguments(
+    train_dataset = train_data, # type: ignore
+    args = SFTConfig(
         per_device_train_batch_size = 2,
-        gradient_accumulation_steps = 2,
+        gradient_accumulation_steps = 4,
         warmup_steps = 5,
         #max_steps = 30,
-        num_train_epochs = 1, # Set this instead of max_steps for full training runs
+        num_train_epochs = 0.01, # Set this instead of max_steps for full training runs
         learning_rate = 2e-4,
         logging_steps = 25,
         optim = "adamw_8bit",
@@ -73,9 +59,9 @@ trainer = Trainer(
 
         # You MUST put the below items for vision finetuning:
         remove_unused_columns = False,
-        # dataset_text_field = "",
-        # dataset_kwargs = {"skip_prepare_dataset": True},
-        # max_length = 2048,
+        dataset_text_field = "",
+        dataset_kwargs = {"skip_prepare_dataset": True},
+        max_length = 2048,
     ),
 )
 
@@ -110,9 +96,8 @@ outputs = []
 for idx, sample in enumerate(tqdm.tqdm(test_data, "Processing inferences ... ")): # type: ignore
     
     image = sample["images"][0]
-            
     instruction = sample["messages"][0]["content"]
-
+    
     messages = [
         {
             "role": "user",
@@ -158,7 +143,7 @@ for idx, sample in enumerate(tqdm.tqdm(test_data, "Processing inferences ... "))
     })
 
 # Save all outputs to JSON
-output_path = "qwen7B_ec35.json"
+output_path = "inference_outputs_qwen7B_full_corr_cxcl.json"
 
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(outputs, f, ensure_ascii=False, indent=2)

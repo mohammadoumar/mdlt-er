@@ -1,14 +1,14 @@
 [
   {
     "id": 0,
-    "prediction": "{\n  \"dominant_emotion\": \"Calm\"\n}"
+    "prediction": "```json\n{\"emotions\": [[\"Joy\"], [\"Joy\"], [\"Surprise\", \"Neutral\"], [\"Neutral\"], [\"Neutral\"], [\"Neutral\"], [\"Sadness\", \"Neutral\"], [\"Neutral\"], [\"Surprise\", \"Fear\"], [\"Neutral\"], [\"Sadness\"], [\"Neutral\"]]}\n```"
   },
   {
     "id": 1,
-    "prediction": "{\n  \"dominant_emotion\": \"Aroused\"\n}"
+    "prediction": "{\"emotions\": [['Anger', 'Sadness'], ['Anger'], ['Anger', 'Surprise', 'Joy'], ['Joy'], ['Anger', 'Sadness'], ['Surprise']]}"
   },
   {
     "id": 2,
-    "prediction": "{\"dominant_emotion\": \"Contentment\"}"
+    "prediction": "{\"emotions\": [[\"Neutral\"], [\"Neutral\"], [\"Neutral\"], [\"Surprise\", \"Fear\"], [\"Neutral\"], [\"Neutral\", \"Neutral\"], [\"Neutral\"], [\"Happy\"], [\"Neutral\"], [\"Neutral\", \"Happy\"], [\"Neutral\"], [\"Neutral\"]]}"
   }
 ]

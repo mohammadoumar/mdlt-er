@@ -1,0 +1,202 @@
+[
+  {
+    "id": 0,
+    "prediction": "```json\n{\"emotions\": [[\"Joy\"], [\"Neutral\"]]}\n```"
+  },
+  {
+    "id": 1,
+    "prediction": "```json\n{\"emotions\": [[\"Sadness\"], [\"Surprise\", \"Fear\", \"Disgust\"], [\"Surprise\", \"Disgust\"], [\"Disgust\"], [\"Sadness\"], [\"Happy\"], [\"Joy\"], [\"Anger\"], [\"Sadness\"], [\"Sadness\"], [\"Anger\", \"Disgust\"], [\"Fear\", \"Sadness\"], [\"Fear\", \"Disgust\"], [\"Neutral\"], [\"Surprise\"], [\"Joy\"]]}\n```"
+  },
+  {
+    "id": 2,
+    "prediction": "```json\n{\"emotions\": [[\"Sadness\"], [\"Anger\", \"Surprise\"], [\"Sadness\"], [\"Disgust\"]]}\n```"
+  },
+  {
+    "id": 3,
+    "prediction": "{\"emotions\": [[\"Disgust\"], [\"Surprise\", \"Fear\"], [\"Shock\", \"Fear\", \"Frustration\"], [\"Surprise\", \"Fear\"], [\"Anger\", \"Frightened\"]]}"
+  },
+  {
+    "id": 4,
+    "prediction": "{\"emotions\": [[\"Fear\"], [\"Surprise\"], [\"Neutral\"], [], [\"Surprise\", \"Neutral\"], [\"Neutral\"]]}"
+  },
+  {
+    "id": 5,
+    "prediction": "```json\n{\n  \"emotions\": [[\"Sadness\", \"Anger\"], [\"Surprise\"], [\"Sadness\", \"Disgust\"], [\"Neutral\"]]\n}\n```"
+  },
+  {
+    "id": 6,
+    "prediction": "{\"emotions\": [['Anger', 'Frightened']]}"
+  },
+  {
+    "id": 7,
+    "prediction": "{\"emotions\": [['Fear', 'Disgust', 'Anger'], [], ['Fear'], [], ['Surprise'], []]}"
+  },
+  {
+    "id": 8,
+    "prediction": "{\"emotions\":[['Disgust', 'Fear', 'Anger'], ['Fear'], ['Fright'], [], [], [], ['Fear'], []]}"
+  },
+  {
+    "id": 9,
+    "prediction": "```json\n{\n  \"emotions\": [[\"Neutral\"], [\"Anger\", \"Disgust\"], [\"Fear\"], [\"Neutral\"], [\"Disgust\"], [\"Anxiety\", \"Hurt\"], [\"Disgust\"], [\"Humor\", \"Fear\"], [\"Humor\"], [], [], [\"Shock\"], []]\n}\n```"
+  },
+  {
+    "id": 10,
+    "prediction": "```json\n{\n  \"emotions\": [\n    [\"Fear\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Fear\"],\n    [\"Neutral\"],\n    [\"Anger\"]\n  ]\n}\n```<tool_call>\n:aload(0)\\"
+  },
+  {
+    "id": 11,
+    "prediction": "{\"emotions\": [['Neutral'], ['Joy'], [], ['Sadness'], ['Neutral', 'Surprise'], ['Neutral'], ['Anger'], ['Neutral'], []]}"
+  },
+  {
+    "id": 12,
+    "prediction": "```json\n{\"emotions\": [['Disgust', 'Fear'], [], ['Neutral'], [], ['Neutral'], ['Anger', 'Fear'], ['Fear'], [], [], [['Fear', 'Anxiety']], ['Anxiety'], [['Disgust', 'Fear']]]\n```"
+  },
+  {
+    "id": 13,
+    "prediction": "```json\n{\n  \"emotions\": [\n    [\"Sadness\", \"Disgust\"],\n    [\"Fear\"],\n    [\"Disgust\", \"Neutral\"],\n    [\"Fear\"],\n    [\"Disgust\"],\n    [\"Sadness\"],\n    [\"Neutral\"],\n    [\"Disgust\", \"Fear\"],\n    [\"Anger\", \"Sadness\"]\n  ]\n}\n```"
+  },
+  {
+    "id": 14,
+    "prediction": "```json\n{\"emotions\": [[\"Anger\"], [\"Neutral\"], [\"Neutral\"], [\"Neutral\"], [\"Neutral\"], [\"Disgust\", \"Neutral\"]]}\n```"
+  },
+  {
+    "id": 15,
+    "prediction": "```json\n{\n  \"emotions\": [\n    [\"Sadness\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Anxiety\", \"Neutral\"],\n    [\"Neutral\"],\n    [\"Disgust\"]\n  ]\n}\n```"
+  },
+  {
+    "id": 16,
+    "prediction": "```json\n{\"emotions\": [['Sadness'], ['Sadness'], ['Anger'], ['Anger'], ['Disgust'], ['Sadness'], ['Neutral']]}\n```"
+  },
+  {
+    "id": 17,
+    "prediction": "```json\n{\"emotions\": [[\"Neutral\"], [\"Fear\"], [\"Anger\", \"Surprise\"], [\"Fear\"], [\"Fear\"], [], [\"Neutral\", \"Fear\"], [\"Joy\"], [\"Neutral\"]]}\n```"
+  },
+  {
+    "id": 18,
+    "prediction": "```json\n{\"emotions\": [[\"Surprise\", \"Neutral\"], [\"Anger\", \"Neutral\"], [\"Neutral\", \"Neutral\"], [\"Anger\", \"Neutral\"], [\"Neutral\", \"Neutral\"], [\"Neutral\", \"Neutral\"], [\"Neutral\", \"Neutral\"], [], [], [], [\"Neutral\", \"Neutral\"]]}\n```"
+  },
+  {
+    "id": 19,
+    "prediction": "{\"emotions\": [[\"Fear\"], [\"Fear\"], [\"Fear\"]]}"
+  },
+  {
+    "id": 20,
+    "prediction": "{\"emotions\": [[], [\"Disgust\", \"Neutral\"], [\"Neutral\"], [\"Neutral\"], [\"Joy\", \"Neutral\"], [\"Neutral\"]]}"
+  },
+  {
+    "id": 21,
+    "prediction": "```json\n{\"emotions\": [[\"Fear\"], [\"Fear\"], [\"Fear\"], [], [], [], [], [\"Fear\"], [], [\"Shock\", \"Anger\"], [], [\"Anxiety\"]]}\n```"
+  },
+  {
+    "id": 22,
+    "prediction": "{\n  \"emotions\": [['Surprise', 'Anger'], [], ['Fear', 'Disgust'], [], ['Fear', 'Disgust'], []]\n}"
+  },
+  {
+    "id": 23,
+    "prediction": "```json\n{\n  \"emotions\": [[\"Anger\"], [\"Neutral\"]]\n}\n```"
+  },
+  {
+    "id": 24,
+    "prediction": "```json\n{\n    \"emotions\": [[\"Disgust\", \"Fear\"], [\"Neutral\", \"Sadness\", \"Anger\", \"Fear\"], [\"Disgust\", \"Fear\"], [\"Neutral\", \"Anger\"], [\"Neutral\", \"Sadness\", \"Fear\"], [\"Disgust\"], [\"Neutral\", \"Sadness\"], [], [\"Disgust\"], [\"Disgust\"], [\"Neutral\"]]\n}\n```"
+  },
+  {
+    "id": 25,
+    "prediction": "```json\n{\n  \"emotions\": [[\"Neutral\"], [\"Disgust\"], [\"Neutral\"], [\"Neutral\"]]\n}\n```"
+  },
+  {
+    "id": 26,
+    "prediction": "```json\n{\n  \"emotions\": [\n    [\"Disgust\"],\n    [\"Annoyed\"],\n    [\"Annoyed\"],\n    [\"Annoyed\"],\n    [\"Neutral\"],\n    [\"Surprised\", \"Sadness\"],\n    [\"Sadness\"]\n  ]\n}\n```"
+  },
+  {
+    "id": 27,
+    "prediction": "{\"emotions\": [['Sadness', 'Anger'], [], ['Anger', 'Fear'], [], ['Shock', 'Confusion'], ['Disgust'], ['Pride', 'Annoyance', 'Resignation', 'Regret', 'Shame'], []]}"
+  },
+  {
+    "id": 28,
+    "prediction": "{\n  \"emotions\": [[\"Fear\"], [\"Anger\", \"Anxiety\"], [\"Disgust\", \"Exasperation\"], [\"Surprise\"]]\n}"
+  },
+  {
+    "id": 29,
+    "prediction": "```json\n{\n  \"emotions\": [['Fear'], ['Disgust']]\n}\n```"
+  },
+  {
+    "id": 30,
+    "prediction": "```json\n{\"emotions\": [['Anger', 'Surprise'], [], [], ['Neutral'], ['Surprise'], ['Disgust'], [], [], ['Neutral'], ['Fear', 'Sadness'], ['Neutral'], ['Surprise', 'Sadness', 'Joy'], [], ['Neutral'], ['Neutral', 'Surprise'], []]}\n```"
+  },
+  {
+    "id": 31,
+    "prediction": "```json\n{\n    \"emotions\": [\n        [\"Neutral\", \"Anger\", \"Neutral\"],\n        [\"Fear\", \"Shock\", \"Shock\", \"Shock\"],\n        [\"Neutral\"],\n        [\"Surprise\", \"Disbelief\"],\n        [\"Fury\"],\n        [\"Anger\"],\n        [\"Frustration\"],\n        [\"Disappointment\"],\n        [\"Horror\", \"Shock\", \"Shock\"],\n        [\"Neutral\", \"Doubt\"],\n        [\"Contempt\"],\n        [\"Annoyance\"],\n        [\"Distraction\", \"Humor\", \"Humor\"],\n        [\"Panic\"],\n        [\"Humor\", \"Humor\", \"Humor\"],\n        [\"Anxiety\", \"Shock\"],\n        [\"Inspection\"]\n    ]\n}\n```"
+  },
+  {
+    "id": 32,
+    "prediction": "{\"emotions\": [['Anger', 'Fear'], ['Joy'], ['Disgust'], ['Anger'], ['Neutral', 'Surprise'], [], [['Neutral'], ['Neutral']]]}"
+  },
+  {
+    "id": 33,
+    "prediction": "{\"emotions\": [['Fear'], ['Sadness', 'Anger'], ['Surprise'], ['Neutral'], ['Surprise'], ['Disgust'], ['Joy']]}"
+  },
+  {
+    "id": 34,
+    "prediction": "{\"emotions\": [[\"Neutral\", \"Surprise\"], [\"Sadness\"], [\"Fear\"], [\"Surprise\"], [\"Anger\"], [\"Anger\"], [\"Neutral\"], [\"Anger\"], [\"Anger\"], [\"Surprise\"], [\"Neutral\"], [\"Surprise\"], [\"Neutral\"], [\"Disgust\"], [\"Disgust\"], [\"Neutral\"], [\"Neutral\"], [\"Disgust\"], [\"Disgust\"], [\"Anger\"], [\"Disgust\"]]}"
+  },
+  {
+    "id": 35,
+    "prediction": "{\"emotions\": [['Fear'], ['Fear'], ['Fear'], ['Neutral', 'Surprise'], ['Disgust', 'Fear'], ['Disgust', 'Sadness'], ['Disgust']]}"
+  },
+  {
+    "id": 36,
+    "prediction": "```json\n{\n  \"emotions\": [\n    [\"Anger\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Fear\"],\n    [\"Neutral\"],\n    [\"Anxiety\", \"Relief\"],\n    [\"Neutral\"],\n    [\"Surprise\", \"Fear\"],\n    [\"Surprise\"],\n    [\"Shock\", \"Happiness\"],\n    [\"Sadness\"],\n    [\"Sadness\"]\n  ]\n}\n```"
+  },
+  {
+    "id": 37,
+    "prediction": "{\"emotions\": [['Disgust'], ['Neutral']]}"
+  },
+  {
+    "id": 38,
+    "prediction": "```json\n{\"emotions\": [[\"Fear\", \"Sadness\"], [\"Fear\"], [], [\"Fear\"], [\"Anxiety\"], [], [], [\"Neutral\"], [\"Fear\"], [], [], [], [\"Surprise\"], []]}\n```"
+  },
+  {
+    "id": 39,
+    "prediction": "```json\n{\n  \"emotions\": [\n    [\"Sadness\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Disgust\", \"Sadness\"],\n    [\"Neutral\"],\n    [\"Neutral\", \"Sadness\"]\n  ]\n}\n```"
+  },
+  {
+    "id": 40,
+    "prediction": "```json\n{\"emotions\": [['Surprise'], ['Sadness'], ['Anger'], ['Neutral'], ['Anxiety'], ['Fear'], ['Fear'], ['Shock'], ['Neutral'], ['Neutral']]]\n```"
+  },
+  {
+    "id": 41,
+    "prediction": "{\n  \"emotions\": [\n    [\"Fear\", \"Anxiety\"],\n    [\"Concern\", \"Nostalgia\"],\n    [\"Relief\", \"Worry\"],\n    [\"Agitation\", \"Shock\"],\n    [\"Defiance\", \"Calm\"],\n    [\"Humility\"]\n  ]\n}"
+  },
+  {
+    "id": 42,
+    "prediction": "```json\n{\"emotions\": [[\"Anger\"], [\"Joy\", \"Surprise\"], [\"Surprise\"], [\"Fear\"], [\"Neutral\", \"Shock\"], [\"Anger\"], [\"Shock\"], [\"Anger\"], [\"Disgust\"], [\"Disgust\"], [\"Disgust\"]]}\n```"
+  },
+  {
+    "id": 43,
+    "prediction": "{\"emotions\": [['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Sadness', 'Fear'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral']]}"
+  },
+  {
+    "id": 44,
+    "prediction": "{\"emotions\": [['Sadness'], ['Surprise'], [], [], [], ['Fear']]}"
+  },
+  {
+    "id": 45,
+    "prediction": "{\n  \"emotions\": [[\"Neutral\", \"Joy\"], [\"Surprise\"], [\"Surprise\"], [\"Joy\"], [\"Neutral\", \"Surprise\", \"Joy\"], [\"Joy\"], [\"Disgust\", \"Anger\"], [\"Anger\"], [\"Neutral\"], [\"Neutral\"], [\"Neutral\"]]\n}"
+  },
+  {
+    "id": 46,
+    "prediction": "{\n  \"emotions\": [[\"Fear\"], [\"Anger\"], [\"Fear\"], [\"Anger\"]]\n}"
+  },
+  {
+    "id": 47,
+    "prediction": "```json\n{\n  \"emotions\": [\n    [\"Anger\", \"Sadness\"],\n    [\"Joy\", \"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Disgust\", \"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Surprise\"],\n    [\"Neutral\"],\n    [\"Neutral\"],\n    [\"Neutral\"]\n  ]\n}\n```"
+  },
+  {
+    "id": 48,
+    "prediction": "```json\n{\n    \"emotions\": [\n        [\"Fear\", \"Surprise\"],\n        [\"Fear\"],\n        [\"Fear\"],\n        [\"Fear\", \"Disgust\"],\n        [\"Anger\"],\n        [\"Surprise\"],\n        [\"Annoyance\"],\n        [\"Neutral\"],\n        [\"Neutral\"],\n        [\"Shock\", \"Disgust\"]\n    ]\n}\n```<tool_call>\n-cmpr-sbml-tetru-se-kei-zr-ban-s-m-kz-zar-so-k-ar-hel-z-a-a-th-te-ndi-e-d-l-l-s-tr-t-k-h-v-d-re-d-a-c-st-g-t-b-at-z-bu-n-m-p-xo-di-a-h-y-e-g-e-r-x-nt-a-n-w-h-i-t-la-t-ld-is-s-is-an-ti-y-a-is-u-n-a-d-n-e-t-a-is-s-n-d-h-m-s-e-f-a-e-i-e-t-s-q-k-e-z-g-q-w-p-d-r-p-b-v-f-u-t-j-h-r-n-w-t-r-z-o-n-k-e-p-r-z-o-n-w-x-n-q-is-q-r-i-y-x-y-m-d-e-g-r-ri-v-t-u-b-n-g-q-r-i-z-q-t-y-e-z-f-e-s-m-q-w-k-w-d-l-r-a-z-a-b-k-i-i-c-r-v-z-b-g-x-x-b-d-g-r-i-d-b-n-u-t-y-s-g-u-m-l-b-z-a-n-u-s-a-y-n-k-y-r-q-b-a-c-y-e-za-t-v-g-p-i-t-r-q-y-j-b-z-t-n-i-x-g-a-n-p-d-g-b-e-u-w-p-g-b-w-r-x-u-n-q-h-u-u-m-w-t-z-v-d-l-m-l-u-s-z-h-e-m-n-b-a-y-m-e-m-q-is-s-w-r-w-b-q-t-f-q-a-x-i-b-m-p-m-t-t-o-t-s-i-m-x-w-k-l-t-k-h-q-k-d-v-s-i-t-q-w-u-i-u-k-k-b-o-y-c-v-p-g-m-k-u-u-i-ri-w-v-w-z-m-q-ri-t-l-y-c-r-n-y-z-e-x-is-w-z-g-q-t-x-e-x-s-i-u-m-o-e-k-e-q-k-s-l-m-s-x-h-e-w-c-k-n-u-k-e-r-m-b-g-b-o-x-z-m-o-t-l-t-e-b-e-u-v-s-s-y-y"
+  },
+  {
+    "id": 49,
+    "prediction": "{\n  \"emotions\": [[\"Surprise\"], [\"Neutral\"], [\"Disgust\"], [\"Fear\"]]\n}"
+  }
+]
