@@ -29,7 +29,7 @@ DATASET_DIR = MDLT_DIR / "datasets" / "json_datasets"
 
 LLAMA_FACTORY_DIR = MDLT_DIR / "LlamaFactory"
 
-BASE_MODEL = "/Utilisateurs/umushtaq/emorec_work/mdlt_er/lfc_merged_models/llama_3.2_11B_vision_merged"
+BASE_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
 LOGGING_DIR = SCRIPTS_DIR / "lfc_log_dir"
 OUTPUT_DIR = MDLT_DIR / "mdemoart_ft_models" / f"""emoartft_llama3.2_11B_merged"""
 
@@ -97,7 +97,7 @@ args = dict(
   overwrite_output_dir=True,             # overrides existing output contents
 
   dataset="emoart5k",                      # dataset name
-  template="mllama",                     # use llama3 prompt template
+  template="qwen2_vl",                     # use llama3 prompt template
   #train_on_prompt=True,
   val_size=0.1,
   max_samples=10000,                       # use 500 examples in each dataset
@@ -116,7 +116,7 @@ args = dict(
   
   fp16=True,                             # use float16 mixed precision training
   quantization_bit=4,  
-  freeze_multi_modal_projector=True,     # use 4-bit QLoRA  
+  #freeze_multi_modal_projector=True,     # use 4-bit QLoRA  
   #use_liger_kernel=True,
   #quantization_device_map="auto",
   

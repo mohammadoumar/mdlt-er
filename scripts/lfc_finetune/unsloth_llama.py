@@ -12,10 +12,10 @@ from unsloth.trainer import UnslothVisionDataCollator
 model, tokenizer = FastVisionModel.from_pretrained(
     #"unsloth/Llama-3.2-11B-Vision-Instruct",
     #"unsloth/Qwen2-VL-2B-Instruct-bnb-4bit",
-    "/Utilisateurs/umushtaq/emorec_work/mdlt_er/lfc_merged_models/llama_3.2_11B_vision_merged",
+    "/Utilisateurs/umushtaq/emorec_work/lfac_setup/LlamaFactory/saves/llamavision11B_sft_merged_full",
     load_in_4bit = True, # Use 4bit to reduce memory use. False for 16bit LoRA.
-    use_gradient_checkpointing = "unsloth", # True or "unsloth" for long context
-    rope_scaling={"type": "linear", "factor": 512/2048}
+    #use_gradient_checkpointing = "unsloth", # True or "unsloth" for long context
+    #rope_scaling={"type": "linear", "factor": 512/2048}
 )
 
 model = FastVisionModel.get_peft_model(

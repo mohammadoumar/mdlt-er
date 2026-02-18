@@ -6,6 +6,8 @@ import random
 
 from PIL import Image
 
+from datasets import Dataset # type: ignore
+
 
 from trl import SFTTrainer, SFTConfig # type: ignore
 from trl.trainer.sft_trainer import DataCollatorForVisionLanguageModeling
@@ -18,31 +20,55 @@ quant_config = BitsAndBytesConfig(
     bnb_4bit_quant_type="nf4"
 )
 
+model_id = "/Utilisateurs/umushtaq/emorec_work/lfac_setup/LlamaFactory/saves/llamavision11B_sft_merged_full"
+
 model = MllamaForConditionalGeneration.from_pretrained(
 
     "unsloth/Llama-3.2-11B-Vision-Instruct",
+    #model_id,
     torch_dtype=torch.bfloat16, # Use bfloat16 if possible for faster training. Switch to float16 if not supported on your GPU.
     device_map="auto",
 )
 
+#sys.exit(0)
+
 processor = AutoProcessor.from_pretrained("unsloth/Llama-3.2-11B-Vision-Instruct")
 collator = DataCollatorForVisionLanguageModeling(processor)
 
-with open("/Utilisateurs/umushtaq/emorec_work/mdlt_er/datasets/json_datasets/llama3_vision_ds_train_lfc.jsonl", "r", encoding="utf-8") as f:
+with open("/Utilisateurs/umushtaq/emorec_work/mdlt_er/datasets/json_datasets/emoart5k_llama_train.jsonl", "r", encoding="utf-8") as f:
     train_data = [json.loads(line) for line in f if line.strip()]
 
 with open("/Utilisateurs/umushtaq/emorec_work/mdlt_er/datasets/json_datasets/llama3_vision_ds_test_lfc.jsonl", "r", encoding="utf-8") as f:
     test_data = [json.loads(line) for line in f if line.strip()]
 
-train_data = random.sample(train_data, 10)
+#train_data = random.sample(train_data, 10)
+#test_data = random.sample(test_data, 3)
+print("------------------------------")
+print(type(train_data), type(test_data))
+print(len(train_data), len(test_data))
+#train_dataset = Dataset.from_list(train_data) # type: ignore
+#print(type(train_dataset))
+#print(train_dataset.features)
+print("------------------------------")
+train_data = [train_data[0]]
+print(len(train_data))
+print(type(train_data)) 
+print(train_data)
+print("------------------------------")
+
+# Use a subset of the training data for quick testing. Remove this line for full training.
 test_data = random.sample(test_data, 3)
 
+#train_data = Dataset.from_list(train_data) # type: ignore
+#print(train_data.features)
 
 trainer = SFTTrainer(
     model = model,
+    processing_class= processor,
     data_collator = collator, # Must use!
-    train_dataset = train_data, # type: ignore
+    train_dataset = test_data, # type: ignore
     args = SFTConfig(
+        do_train=True,
         per_device_train_batch_size = 2,
         gradient_accumulation_steps = 4,
         warmup_steps = 5,
@@ -54,14 +80,14 @@ trainer = SFTTrainer(
         weight_decay = 0.001,
         lr_scheduler_type = "linear",
         seed = 3407,
-        #output_dir = "outputs/qwen7b",
+        output_dir = "outputs/qwen7b",
         report_to = "none",     # For Weights and Biases
 
         # You MUST put the below items for vision finetuning:
-        remove_unused_columns = False,
-        dataset_text_field = "",
-        dataset_kwargs = {"skip_prepare_dataset": True},
-        max_length = 2048,
+        # remove_unused_columns = False,
+        # dataset_text_field = "",
+        # dataset_kwargs = {"skip_prepare_dataset": True},
+        # max_length = 2048,
     ),
 )
 
@@ -143,7 +169,7 @@ for idx, sample in enumerate(tqdm.tqdm(test_data, "Processing inferences ... "))
     })
 
 # Save all outputs to JSON
-output_path = "inference_outputs_qwen7B_full_corr_cxcl.json"
+output_path = "inference_outputs_qwen7B_full_corr_cxclzz.json"
 
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(outputs, f, ensure_ascii=False, indent=2)
