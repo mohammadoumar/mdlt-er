@@ -77,3 +77,32 @@ ComicEmotion is a research-oriented framework for detecting and analyzing emotio
 
 ## License
 - Add project license and dataset-specific licenses; default to an open research-friendly license (choose and document explicitly).
+
+# 📦 Requirements
+
+We use the following versions of the packages:
+
+```
+torch==2.4.0
+gradio==4.43.0
+pydantic==2.9.0
+LLaMA-Factory==0.9.0
+transformers==4.44.2
+bitsandbytes==0.43.1
+```
+
+For fine-tuning, you need to install LLaMA-Factory. Run the following command to install LLaMA-Factory and all the necessary dependencies and updates:
+
+```
+bash setup.sh
+```
+
+<br>
+
+# 💻 Platform and Compute
+
+- For fine-tuning LLMs, we use [**LLaMA-Factory.**](https://github.com/hiyouga/LLaMA-Factory)
+- For model checkpoints, we use [**Unsloth.**](https://unsloth.ai/)
+- We also use [**Hugging Face.**](https://huggingface.co/)
+
+All experiments have been performed on the High Performance Cluster at [**La Rochelle Université.**](https://www.univ-larochelle.fr/)
