@@ -1,0 +1,262 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n1. COHEN, HERE--\n2. @AGENT COHEN, IT'S EMMA.\n3. @I NEED YOUR HELP."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Joy'], ['Fear'], ['Fear']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n 1. YOU GOT ANYTHING MORE FUN THAN ONE CALORIE COLA?\n 2. CUPBOARD.\n 3. IN RUSSIA, WE DON'T DRINK WITHOUT REASON.\n 4. IT IS FOR WEDDING OR CHILD OR FUNERAL OR HOLIDAY.\n 5. VODKA IS CELEBRATION OF OCCASION.\n 6. IT IS EARNED BY GRACE OF MERCILESS GOD.\n 7. YOU UNDERSTAND?\n 8. YEAH. I GET IT.\n 9. WHY DON'T WE POUR THIS ONE FOR YOU THEN.\n10. FOR ME?\n11. WHY IS THIS SPECIAL?\n12. AFTER WHAT YOU DID TO ICE.\n13. THIS IS YOUR LAST DRINK BEFORE I BREAK YOUR NECK."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Disgust', 'Joy'], ['Neutral'], ['Neutral'], ['Neutral'], ['Joy'], ['Joy'], ['Anger'], ['Anger', 'Surprise'], ['Anger', 'Surprise'], ['Surprise'], ['Surprise'], ['Anger'], ['Anger']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n1. I CAN HEAR YOU JUST FINE. KING?\n2. BORED AS ALWAYS.\n3. THERE HAS TO BE A BETTER WAY OF DOING THIS….\n4. MUST BE A PROBLEM ON JOE'S END. I'LL GO CHECK IT OUT.\n5. HEY, JACKSON. I'VE BEEN MEANING TO TELL YOU SOMETHING. BUT DON'T BE MAD.\n6. I FOUND A SECRET PASSAGEWAY BEHIND A WALL IN THE LIBRARY.\n7. AND YOU'RE TELLING ME THIS NOW?\n8. GODDAMMIT, TRICK. I TOLD YOU…"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Anger'], ['Disgust', 'Sadness'], ['Disgust', 'Sadness'], ['Surprise'], ['Fear'], ['Fear'], ['Anger'], ['Anger']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n 1. WHUT… #GASP#… WHAT DO WE… DO NOW?\n 2. FIRE UP THE BARBECUE.\n 3. IT SMELLED LIKE PORK.\n 4. GAWD. IT'S LIKE WE'RE BREATHING HIM IN.\n 5. FLOWERS DECAY. BANQUETS SPOIL. WATER EVAPORATES. AND SNEAKY VICTORY HAD SOURED.\n 6. NOW ALL EITHER OF THEM WANTED WAS TO SLEEP.\n 7. THEY SAY THAT COMMON HOUSE DUST IS 90% DESICCATED HUMAN FLESH.\n 8. AS BARB REACHED FOR THE CLEAVER UNDER THE BED…\n 9. … RENNY REACHED FOR THE BALLBAT.\n10. BECAUSE IT WAS WHAT IT WAS…\n11. … DOWN DEEP, WHERE THE HEART WAS."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Fear'], ['Anger'], ['Neutral'], ['Anger', 'Sadness'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral'], ['Neutral']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n1. \" THE SATELLITE UP THERE, WE NEED TWO PEOPLE TO COMPLETE THE OPERATION. ONE TO EJECT THE CURRENT FILM, THE OTHER TO CATCH THAT FILM AND DESTROY IT.\n2. JOEL IS CURRENTLY BEING LICKED BACK TOGETHER BY DUNG BEETLES. SCARABIDAE. THEY REPAIR NECROTIC TISSUE IN HIS KIND. POINT IS, HE'S OFF THE TABLE FOR THE MISSION. OUR BEST MAN. SO ALL WE HAVE… IS YOU.\n3. I GET IT, BUT STILL, WHAT IF I HAVE ANOTHER ONSET OF WHATEVER THE HELL THAT WAS?\n4. \" THAT DRIP IN YOUR ARM IS GOLD. IT'S LIKELY THE MOST EXPENSIVE IV IN HISTORY. THE VIRUS IN YOUR BLOOD THRIVES ON HEALTH.\n5. \" THE WEAKER WE KEEP YOU, THE LESS INCLINED YOUR BODY IS TO TRANSFORM AGAIN.\n6. \" THE BAD NEWS IS, WE'LL HAVE TO KEEP UPPING THE DOSE. TO STAVE OFF THE TRANSFORMATION. AND EVENTUALLY, IT WILL KILL YOU.\n7. SO MY CHOICES ARE, A BULLET HERE ON SOLID GROUND, OR A SLOW DEATH FLOATING UP IN THE VOID? I THINK I'LL TAKE THE BULLET.\n8. THAT ISSSSS, IF YOU'RE MAN ENOUGH TO AIM STRAIGHT!"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Neutral'], ['Neutral'], ['Anger', 'Fear', 'Surprise'], ['Neutral'], ['Neutral'], ['Sadness'], ['Anger', 'Fear', 'Sadness'], ['Anger', 'Fear', 'Sadness']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n1. JESUS… WHY DO PEOPLE KEEP SHOOTING AT ME? HAVEN'T EVEN HEALED FROM THE LAST TIME…\n2. AH, BUT YOU SEE…\n3. NOT A MARK ON YOU, JACKSON. THE ONLY THING THAT WILL BE BRUISED IS YOUR EGO.\n4. EVERYBODY NEEDS A WAY TO GET THEIR JOLLIES OFF.\n5. BUT I'M STILL NOT GIVING UP ANY INFO, SILBÓN.\n6. AH WELL, WE'LL JUST HAVE TO SEE IF YOU'RE AFRAID OF THE DARKNESS.\n7. THE DARKNESS? WHY WOULD I BE AFRAID OF THE DARK?\n8. EXACTLY."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Fear', 'Sadness'], ['Sadness'], ['Disgust', 'Sadness'], ['Joy'], ['Joy'], ['Anger', 'Sadness'], ['Fear', 'Surprise'], ['Joy']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n 1. HUNG OVER?\n 2. HARDLY. I CAN HANDLE MY DRINK. UNLIKE YOU, WHO SEEMS TO HAVE DRUNK TOO MUCH AND LED YOUR PROTÉGÉ ON.\n 3. LISTEN, I KNOW HE WANTS MORE, AND YOU WANT TO SEE ME AS SOMEONE WHO LIVES UP TO YOUR CHIVALROUS IDEALS.\n 4. BUT I CAN'T BE HELD ACCOUNTABLE FOR OTHER PEOPLE'S EXPECTATIONS OF ME.\n 5. YOU'RE A CONFIDENCE ARTIST. YOU MANIPULATE EXPECTATIONS FOR A LIVING.\n 6. MUCH AS I'D LOVE FOR US ALL TO KEEP ARGUING, I HAVE WHAT I NEED FOR THE JOB, AND, ACCORDING TO MAGISTER PAVUS, WE NEED TO MOVE FAST.\n 7. SO LET'S JUST GO OUR SEPARATE WAYS… SINCE WE ALL HATE EACH OTHER.\n 8. NO. WITH THE QUNARI COMING, WE STICK TOGETHER SO I CAN KEEP YOU ALL SAFE.\n 9. THAT'S VERY NOBLE OF YOU.\n10. NOT WANTING TO LET ANYONE DOWN."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Surprise'], ['Anger', 'Surprise'], ['Sadness', 'Surprise'], ['Anger'], ['Anger'], ['Sadness'], ['Anger', 'Sadness'], ['Fear', 'Surprise'], ['Joy'], ['Sadness']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n1. #AHHH.\n2. WHAT THE HELL? WHERE AM I?\n3. NO, NO, NO… WHAT IS THAT?\n4. OH MY GOD!\n5. NO!\n6. #AAAHHHH--"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Fear'], ['Fear', 'Surprise'], ['Fear', 'Surprise'], ['Fear', 'Surprise'], ['Fear', 'Surprise'], ['Fear', 'Surprise']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n 1. HOW YOU WANNA PLAY THIS?\n 2. PLAY IT?\n 3. YEAH, YOU WANNA GO CHARGING IN, OR DO YOU WANNA ACT ALL COOL?\n 4. JUST OPEN THE DOOR, WILL YA?\n 5. HELLO?\n 6. SECURITY PATROL! WHOEVER'S UP THERE…\n 7. … YOU'RE TRESPASSING ON PRIVATE PROPERTY!\n 8. RO-SHAM-BO FOR WHO GOES UP FIRST? AGE BEFORE BEAUTY?\n 9. JUST LOOK OUT.\n10. ALRIGHT THEN, MAKING US COME UP THERE'S JUST MAKING IT WORSE FOR YOU.\n11. HEY YOU! WHAT'RE YOU DOING THERE?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Joy'], ['Surprise'], ['Joy'], ['Anger'], ['Surprise'], ['Anger'], ['Anger'], ['Joy'], ['Anger'], ['Anger', 'Sadness'], ['Anger', 'Surprise']]}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "image",
+            "image": "/Utilisateurs/umushtaq/emorec_work/uvmoondream/images/page00003.jpg"
+          },
+          {
+            "type": "text",
+            "text": "\n\n    Multimodal Comic Book Emotion Analysis Expert Role\n\n    Task Overview:\n    You are an advanced multimodal emotion analysis expert specializing in interpreting comic book page emotions through both visual and textual cues.\n\n    INPUT MODALITIES:\n    Visual Input:\n    - A full-page image of a comic book page\n    - Includes panels, character expressions, visual context, and scene composition\n\n    Textual Input:\n    - Numbered list of utterances corresponding to the page\n\n    TASK: Emotion Classification\n\n    - Analyze visual cues in the comic page: Character facial expressions, Body language, Color palette, Panel composition, Character positioning\n    - Cross-reference visual emotions with textual utterances\n    - Consider contextual and subtle emotional nuances\n    - Identify applicable emotions from the following classes:\n    \"Anger\", \"Disgust\", \"Fear\", \"Sadness\", \"Surprise\", \"Joy\", \"Neutral\"\n\n    RULES:\n    - Use ONLY the labels listed above\n    - Output MUST BE a one-line compact JSON with single key \"emotions\"\n    - Respond ONLY with the JSON object. No additional text before or after.\n    - Value must be an array where:\n    - Each element is an array of emotions for one utterance\n    - Order matches the input utterances order\n    - Multiple emotions are allowed per utterance\n    - No explanations, only JSON output\n\n    IMPORTANT:\n    - Respond with a ONE-LINE JSON\n    - Each array element corresponds to one utterance\n    - One utterance can have multiple emotions\n    - Maintain exact spelling and case of emotion labels\n    - Keep emotions in arrays even for single emotions\n\n    - Example output format: {\"emotions\": [['Anger', 'Sadness'], ['Joy'], ['Fear'], ['Neutral']]}\n\n    Here are the utterances on the comic page that you will classify:\n 1. IT WAS JUST A QUICK TALK WITH HER--\n 2. --A QUICK FLIRT, YOU MEAN.\n 3. WHAT'S THE MATTER? CAN'T SPOT THE \" AMATEUR \" A HEAD START?\n 4. FINE. FIRST TO GET SOMETHING FROM THE GIRL OR THE BROTHER.\n 5. SURE.\n 6. NOW, IF YOU'LL EXCUSE ME, SHE'S HERE TO SEE ME.\n 7. THE KEY HERE IS TO LET THE BOY DO MY WORK FOR ME.\n 8. ALL I NEED IS THE NAMES OF THOSE TWO.\n 9. OUR PARENTS HAD A LOT IN COMMON WITH YOUR FATHER. SHARED INTERESTS, IF YOU WILL.\n10. FRANCESCA, SHUSH.\n11. FLORIAN AND FRANCESCA INVIDUS?\n12. I AM MAGISTER ARAMIS, AND RIGHT NOW, YOU ARE INTERFERING IN MY INVESTIGATION."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{'emotions': [['Joy'], ['Disgust', 'Surprise'], ['Surprise', 'Joy'], ['Fear'], ['Joy'], ['Joy'], ['Joy'], ['Neutral'], ['Joy'], ['Fear'], ['Surprise'], ['Surprise']]}"
+          }
+        ]
+      }
+    ]
+  }
+]

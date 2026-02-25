@@ -7,7 +7,7 @@ ComicEmotion is a research-oriented framework for detecting and analyzing emotio
 - Robust emotion recognition across panels, pages, and entire narratives.
 - Jointly model visual, textual, and layout signals.
 - Support multiple languages and cross-lingual transfer for low-resource comics.
-- Provide modular experiments for research and prototyping.
+- Sequential Transfer Learning.
 
 ## Key Features
 - Multimodal input: images, OCR text, speech-bubble layouts, metadata.
