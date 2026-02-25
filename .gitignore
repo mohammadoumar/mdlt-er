@@ -21,6 +21,8 @@ merged_llama_vision/
 *.arrow 
 *.lock  
 dataset_info.json
+*.jsonl
+*.json
 
 *.jpg
 *.jpeg
