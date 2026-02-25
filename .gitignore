@@ -18,6 +18,9 @@ merged_llama_vision/
 *.ckpt
 *.log
 *.pth
+*.arrow 
+*.lock  
+dataset_info.json
 
 *.jpg
 *.jpeg

@@ -1,9 +1,9 @@
 # 📣 Advancing Multimodal Emotion Recognition in Comics via Multi-disciplinary, Multi-Task, Multi-Lingual Transfer Learning 📣
 
-## ℹ️ Summary
+# ℹ️ Summary
 This work proposes a sequential transfer learning framework for multimodal emotion recognition in comics, integrating multidisciplinary, multi-task, and multi-lingual adaptation within a unified pipeline. Leveraging large-scale vision–language models, we progressively refine representations through cross-domain supervision from fine art (EmoArt), auxiliary visual question answering (EMID), and multilingual adaptation using Japanese manga (MangaVQA). The staged transfer process promotes domain-invariant affective features, strengthens visual–linguistic grounding, and enhances cross-cultural robustness. In addition, we investigate merged models obtained from sequentially fine-tuned adapters to consolidate knowledge across tasks while preserving stability. Extensive experiments demonstrate consistent improvements across architectures, highlighting the effectiveness of structured sequential transfer learning and model merging over single-stage adaptation. Our results advance robust, context-aware emotion understanding in comics and broader multimodal narrative media.
 
-## 🪜 Goals
+# 🪜 Goals
 - Develop a sequential transfer learning framework for multimodal emotion recognition in comics that integrates multidisciplinary, multi-task, and multi-lingual adaptation within a unified training pipeline.
 - Enhance cross-modal representation quality by leveraging auxiliary supervision (fine art emotion datasets and visual question answering) to promote domain-invariant and semantically grounded affective features.
 - Evaluate cross-lingual and cross-cultural generalization through adaptation to Japanese manga, assessing robustness to linguistic and stylistic variation..
@@ -16,69 +16,55 @@ This work proposes a sequential transfer learning framework for multimodal emoti
 - Multidisciplinary priors: visual affect cues, comic-specific conventions, cultural annotations.
 - Extensible model zoo: vision encoders, multimodal transformers, graph-based scene models, multimodal LLMs for generative explanations. -->
 
-## Datasets
-- Recommended sources: public comic datasets, crowdsourced annotations, simulated augmentations.
-- Annotation schema: canonical emotion set (configurable), intensity (0–1), actor ID, confidence, cultural/context tags, language tag.
-- Quality: inter-annotator agreement, adjudication workflow, balanced sampling across languages and art styles.
+# 🧮 Datasets
 
-## Models and Architecture
-- Preprocessing: panel extraction, speech-bubble detection, OCR, layout parsing.
-- Representation: image features, text embeddings, spatial/layout encodings, character graphs.
-- Core models:
-    - Vision + Language encoders for classification and retrieval.
-    - Graph Neural Networks for character interaction modeling.
-    - Multimodal generative models for explanation and counterfactuals.
-- Heads:
-    - Emotion classification (categorical)
-    - Emotion intensity/regression
-    - Character attribution / coreference resolution
-    - Multilingual normalization & translation
-    - Explanation generation (textual)
+We experiment with four datasets:
+
+- EmoComics35: A comics dataset with emotion annotations at utterance level, for multimodal emotion classification.
+- EmoArt: A fine art emotion dataset annotated with a canonical emotion taxonomy, arousal and valence annotations, attributes analysis, and art description, enabling cross-domain affect modeling. -- [**EmoArt**](https://zhiliangzhang.github.io/EmoArt-130k/#)
+- Emotionally paired Music and Image Dataset (EMID): A multimodal dataset pairing images with emotionally aligned music clips, annotated with discrete emotion labels. -- [**EMID**](https://huggingface.co/datasets/orrzohar/EMID-Emotion-Matching)
+- MangaVQA: A Japanese manga-based visual question answering dataset containing panel-level image–question–answer triples, designed to evaluate multimodal reasoning and cross-lingual visual–textual grounding in narrative contexts. --  [**MangaVQA**](https://huggingface.co/datasets/hal-utokyo/MangaVQA)
+
+# ⛓️ Models
+
+We experiment with the following models:
+
+- **LLaMA-Vision** -- LLaMA-3.2-Vision-11B-Instruct, LLaMA-3.2-Vision-90B-Instruct -- [**Meta AI**](https://huggingface.co/meta-llama)
+
+- **Qwen-VL** -- Qwen-2.5-VL-7B-Instruct, Qwen-2.5-VL-72B-Instruct, Qwen-3-VL-8B-Instruct -- [**Qwen**](https://huggingface.co/Qwen)
+
+-  **LLaVA** -- LLaVA-1.5, LLaVA-NeXT -- [**Llava Hugging Face**](https://huggingface.co/llava-hf)
+
+- **Pixtral** -- [**Mistral AI**](https://huggingface.co/mistralai)
+
+<br>
 
 
+# 🎛️ Training Strategy
+- Initialize large-scale vision–language models (e.g., Qwen-VL, LLaMA-Vision, Pixtral, LLaVA) and establish a multimodal baseline on EmoComics35 for panel-level emotion recognition.
+- Apply multi-disciplinary sequential transfer learning by first adapting the model on EmoArt to learn domain-invariant affective primitives (color, composition, stylization), followed by refinement on comics data.
+- Introduce multi-task supervision through sequential fine-tuning on EMID (VQA), strengthening visual–linguistic grounding and contextual reasoning before re-specializing for emotion classification.
+- Extend to a multilingual transfer stage via adaptation on MangaVQA (Japanese), promoting cross-lingual semantic abstraction and cross-cultural robustness.
+- Perform model merging across sequential stages to integrate accumulated knowledge from multi-disciplinary, multi-task, and multilingual adaptations, and evaluate both stage-wise and merged configurations to quantify cumulative transfer gains.
 
-## Training Strategy
-- Pretrain vision and language encoders on broad multimodal corpora.
-- Multi-task finetuning with task-specific heads and weighted loss scheduling.
-- Curriculum learning: visual cues → text cues → joint reasoning.
-- Data augmentation: style transfer, synthetic speech-bubbles, translation augmentation.
+# 🔧 Evaluation
+- Stage-wise Sequential Transfer Evaluation: Systematically evaluate model performance after each sequential transfer learning stage (multimodal baseline, multi-disciplinary, multi-task, multilingual) to quantify incremental gains, stability, and generalization using accuracy and macro-F1. Controlled ablations assess the individual contribution of each transfer dimension.
+- Merged Model and Cross-Architecture Assessment: Evaluate merged models that integrate knowledge from multiple transfer stages, comparing them against stage-wise counterparts across different vision–language architectures to measure cumulative knowledge integration, robustness, and cross-domain effectiveness.
 
-## Evaluation
-- Metrics: accuracy/F1 for classification, MAE/RMSE for intensity, precision/recall for attribution, BLEU/ROUGE for generated explanations.
-- Robustness tests: cross-style, cross-language, occlusion, noisy-OCR resilience.
-- Human evaluation: qualitative assessment for generated explanations and cultural appropriateness.
-
-## Project Structure (suggested)
-- data/ — dataset manifests, annotation formats
-- src/preproc/ — OCR, layout, panel segmentation
-- src/models/ — model definitions and training scripts
-- src/eval/ — metrics and evaluation suites
-- experiments/ — config files, checkpoints, logs
-- docs/ — annotation guidelines, taxonomy, API docs
-
-## Ethics & Responsible Use
-- Respect copyright and creator rights for comic content; use licensed or public-domain corpora.
-- Document dataset provenance and annotation guidelines.
-- Monitor for cultural bias in emotion labels and translations; include mitigation and audit steps.
-- Include opt-out and privacy guidance for sensitive content if using real-world material.
 
 # 📦 Requirements
 
 We use the following versions of the packages:
 
 ```
-torch==2.4.0
-gradio==4.43.0
-pydantic==2.9.0
-LLaMA-Factory==0.9.0
-transformers==4.44.2
-bitsandbytes==0.43.1
-```
-
-For fine-tuning, you need to install LLaMA-Factory. Run the following command to install LLaMA-Factory and all the necessary dependencies and updates:
-
-```
-bash setup.sh
+accelerate>=1.12.0
+bitsandbytes>=0.49.1
+peft>=0.18.1"
+pillow>=12.1.1"
+torch>=2.7.0
+transformers>=4.51.1
+unsloth==2026.2.1
+LLaMA-Factory==0.9.5
 ```
 
 <br>
@@ -90,3 +76,7 @@ bash setup.sh
 - We also use [**Hugging Face.**](https://huggingface.co/)
 
 All experiments have been performed on the High Performance Cluster at [**La Rochelle Université.**](https://www.univ-larochelle.fr/)
+
+
+# Ethics & Responsible Use
+Datasets and models are the property of their respective owners. Please consult their official documentation and websites for licensing terms, usage restrictions, and responsible AI policies prior to use.
