@@ -1,9 +1,9 @@
-# ComicEmotion — Multidisciplinary Multimodal Emotion Recognition for Comics
+# 📣 Advancing Multimodal Emotion Recognition in Comics via Multi-disciplinary, Multi-Task, Multi-Lingual Transfer Learning 📣
 
-## Summary
+## ℹ️ Summary
 ComicEmotion is a research-oriented framework for detecting and analyzing emotions in comics using multimodal generative AI. The project integrates multidisciplinary knowledge (art, linguistics, psychology), multi-task pipelines (emotion classification, intensity, character attribution, scene context), and multilingual support to handle speech balloons, captions, and visual cues.
 
-## Goals
+## 🪜 Goals
 - Robust emotion recognition across panels, pages, and entire narratives.
 - Jointly model visual, textual, and layout signals.
 - Support multiple languages and cross-lingual transfer for low-resource comics.
